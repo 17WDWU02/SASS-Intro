@@ -1,8 +1,17 @@
+//Importing other scss files
+//You would do this to clean up your code and seperate different sectons into different files
+@import 'base_folder/base';
+
+// DECLARATION OF VARIABLES
+// Best Practice to decalare the variables at the top of the page
+// If you call the variable before you decalare it then it wont recognise what the variable is
 $size : 150px;
 $primary-color : #3bbfce;
+$squareCount: 3;
 
 body{
-	margin : 10px;
+	//I have declared the margin variable in the _base.scss file
+	margin : $margin;
 	padding : 10px
 }
 
@@ -10,6 +19,7 @@ p{
 	color: black;
 }
 
+//Creating a group of common styles which might be repeated throughout the project
 @mixin boxsize{
 	width: $size;
 	height: $size;
@@ -17,6 +27,8 @@ p{
 }
 
 .box{
+	//Including the mixin group which I called above
+	//This will add all of the styles into this element
 	@include boxsize;
 	background-color: $primary-color;
 }
@@ -24,6 +36,7 @@ p{
 .box2{
 	@include boxsize;
 	background-color: complement($primary-color);
+	//When I want to only change an element within this one
 	p{
 		color: white;
 		a{
@@ -41,13 +54,19 @@ p{
 }
 
 .box4{
+	//I want the width to be double the size of my size variable
 	width: $size * 2;
+	//I want the height to be half the one of my size variable.
 	height: $size/2;
 	float: left;
 	background-color: lighten($primary-color, 10%);
 }
 
-$squareCount: 3;
+//In my html I have 3 divs where the only difference is the number in their ID
+//I want to loop over each of them and create 3 seperate css elements
+//In this situation $i is the number of which loop you are in
+//For the first loop $i=1, second $i=2 and third $i=3
+//It will continue for the number of times I have put into the $squareCount variable
 @for $i from 1 through $squareCount{
 	#square-#{$i}{
 		clear: both;
