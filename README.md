@@ -1,7 +1,9 @@
 # SASS: Syntactically Awesome Style Sheets
+[![N|Solid](https://raw.githubusercontent.com/indievox-inc/iNDIEVOX-Web-Profile/master/image/sass-logo.png )](http://sass-lang.com/)
+
 Set up for an intro sass project with Sublime Text
 
-# Installations
+# Installations Using Sublime Text
 1. Install [Package Control](https://packagecontrol.io/installation)
 2. Install sass package
 3. Install scss package
@@ -9,8 +11,8 @@ Set up for an intro sass project with Sublime Text
 5. Install [Koala App](http://koala-app.com/) onto your computer
 
 # Preparing Project
-1. Open blank project in Sublime Text
-2. Create index.html
+1. Create a blank project and open Sublime Text
+2. Create index.html and add the default tags
 3. Create a CSS and SCSS folder
 4. In SCSS create a file named "style.scss:
 5. In CSS create a file named "style.css"
