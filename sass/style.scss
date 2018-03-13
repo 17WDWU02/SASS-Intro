@@ -33,6 +33,7 @@ p{
 	background-color: $primary-color;
 }
 
+//Nesting is when you include sections within each other
 .box2{
 	@include boxsize;
 	background-color: complement($primary-color);
